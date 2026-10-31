@@ -1,0 +1,96 @@
+--- FIRST 5 ROWS ---
+   Car_ID    Brand  Year  Kilometers_Driven Fuel_Type Transmission Owner_Type  Engine_CC  Mileage_KMPL  Seats  Selling_Price
+0       1      Kia  2022              77099    Diesel       Manual     Second       2887          26.0      7        1248000
+1       2    Honda  2025             161921       CNG       Manual      First       1439          17.4      5         901000
+2       3  Renault  2021             167932    Petrol       Manual      First        972          12.6      5         433000
+3       4     Ford  2025              36585    Petrol    Automatic      First       2370          19.4      5        1137000
+4       5   Toyota  2015             158087    Petrol    Automatic      First       1058          27.3      5         537000
+
+--- DATASET INFO ---
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1100 entries, 0 to 1099
+Data columns (total 11 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   Car_ID             1100 non-null   int64  
+ 1   Brand              1100 non-null   object 
+ 2   Year               1100 non-null   int64  
+ 3   Kilometers_Driven  1100 non-null   int64  
+ 4   Fuel_Type          1100 non-null   object 
+ 5   Transmission       1100 non-null   object 
+ 6   Owner_Type         1100 non-null   object 
+ 7   Engine_CC          1100 non-null   int64  
+ 8   Mileage_KMPL       1100 non-null   float64
+ 9   Seats              1100 non-null   int64  
+ 10  Selling_Price      1100 non-null   int64  
+dtypes: float64(1), int64(6), object(4)
+memory usage: 94.7+ KB
+
+--- STATISTICAL SUMMARY ---
+            Car_ID         Year  Kilometers_Driven    Engine_CC  Mileage_KMPL        Seats  Selling_Price
+count  1100.000000  1100.000000        1100.000000  1100.000000   1100.000000  1100.000000   1.100000e+03
+mean    550.500000  2018.544545       93693.898182  1889.747273     19.137182     5.350000   7.656036e+05
+std     317.686953     4.074468       51108.573327   620.897053      5.145327     0.912081   2.750646e+05
+min       1.000000  2012.000000        5155.000000   812.000000     10.000000     4.000000   1.200000e+05
+25%     275.750000  2015.000000       47634.250000  1360.750000     14.900000     5.000000   5.720000e+05
+50%     550.500000  2019.000000       94694.000000  1872.000000     19.250000     5.000000   7.395000e+05
+75%     825.250000  2022.000000      140748.000000  2412.250000     23.600000     5.000000   9.347500e+05
+max    1100.000000  2025.000000      179668.000000  2997.000000     28.000000     7.000000   1.714000e+06
+
+--- DATA TYPES ---
+Car_ID                 int64
+Brand                 object
+Year                   int64
+Kilometers_Driven      int64
+Fuel_Type             object
+Transmission          object
+Owner_Type            object
+Engine_CC              int64
+Mileage_KMPL         float64
+Seats                  int64
+Selling_Price          int64
+dtype: object
+
+Quantitative Column Labels:
+ ['Car_ID', 'Year', 'Kilometers_Driven', 'Engine_CC', 'Mileage_KMPL', 'Seats', 'Selling_Price']
+
+Qualitative Column Labels:
+ ['Brand', 'Fuel_Type', 'Transmission', 'Owner_Type']
+
+Skewness:
+ Car_ID               0.000000
+Year                -0.035929
+Kilometers_Driven   -0.036479
+Engine_CC            0.039689
+Mileage_KMPL        -0.069944
+Seats                0.975396
+Selling_Price        0.436421
+dtype: float64
+
+Kurtosis:
+ Car_ID              -1.200000
+Year                -1.225431
+Kilometers_Driven   -1.261080
+Engine_CC           -1.154251
+Mileage_KMPL        -1.177640
+Seats               -0.242676
+Selling_Price        0.244279
+dtype: float64
+Done! Use 'show' commands to display/save.   |███████████████████████████████████████████████████████████████| [100%]   00:00 -> (00:00 left)
+Report Sweetviz_Report.html was generated! NOTEBOOK/COLAB USERS: the web browser MAY not pop up, regardless, the report IS saved in your notebook/colab files.
+
+Sweetviz Report generated successfully as 'Sweetviz_Report.html'
+
+Training Data Shape: X_train (880, 5), y_train (880,)
+Testing Data Shape: X_test (220, 5), y_test (220,)
+
+================ MODEL COMPARISON ================
+            Model  R² Score          MSE          RMSE  Cross Validation R² (Mean)
+Linear Regression  0.698287 2.577897e+10 160558.317338                    0.626878
+ Ridge Regression  0.698282 2.577941e+10 160559.680329                    0.626880
+ Lasso Regression  0.698287 2.577899e+10 160558.355451                    0.626878
+
+================ CROSS VALIDATION SCORES ================
+Linear Regression CV: [0.62646295 0.64038361 0.64207219 0.6134147  0.61205574]
+Ridge Regression CV : [0.62643555 0.64040578 0.64206571 0.61342437 0.61206895]
+Lasso Regression CV : [0.62646216 0.64038417 0.64207202 0.61341493 0.61205598]
